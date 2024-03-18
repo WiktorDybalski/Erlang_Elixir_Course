@@ -1,0 +1,8 @@
+# IntelliJ IDEA
+.idea/
+
+# Erlang
+.eunit/
+*.beam
+*.dump
+erl_crash.dump
