@@ -87,3 +87,14 @@ calculate_mean3_m([{MeasurementType, Value} | T], Type, {Sum, Counter}) when Mea
   calculate_mean3_m(T, Type, {Sum + Value, Counter + 1});
 calculate_mean3_m([_ | T], Type, {Sum, Counter}) ->
   calculate_mean3_m(T, Type, {Sum, Counter}).
+
+%%ListaPomiarow = KalkulatorZanieczyszczenia:listaPomiarow().
+%%Pomiary = fun(D) -> lists:map(fun({_, _, P}) -> P end, D) end.
+%%WszystkiePomiary = Pomiary(ListaPomiarow)
+%%WszystkiePomiarySplaszczone3 = fun(P) -> lists:foldl(fun(InnerList, Acc) -> Acc ++ InnerList end,[], P) end.
+%%Splasczone = WszystkiePomiarySplaszczone3(WszystkiePomiary).
+%%KonkretnyPomiar = fun(P, Pomiar1) -> [{Pomiar, Wartosc} || {Pomiar, Wartosc} <- P, Pomiar == Pomiar1] end.
+%%Cisnienie = KonkretnyPomiar(Splasczone, "cisnienie").
+%%WilgotnoscSr = lists:sum(Wilgotnosc) / length(Wilgotnosc).
+
+
