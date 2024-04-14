@@ -9,10 +9,10 @@ grt_eq_than([], _) -> [];
 grt_eq_than(List, Arg) -> [X || X <- List, X >= Arg].
 
 qs([]) -> [];
-qs([Pivot|Tail]) -> qs(less_than(Tail, Pivot)) ++ [Pivot] ++ qs(grt_eq_than(Tail, Pivot)).
+qs([Pivot | Tail]) -> qs(less_than(Tail, Pivot)) ++ [Pivot] ++ qs(grt_eq_than(Tail, Pivot)).
 
 
-random_elems(N, Min, Max) -> [rand:uniform(Max - Min + 1) + Min - 1 || _<- lists:seq(1, N)].
+random_elems(N, Min, Max) -> [rand:uniform(Max - Min + 1) + Min - 1 || _ <- lists:seq(1, N)].
 
 compare_speeds([]) -> [];
 compare_speeds(List) ->
